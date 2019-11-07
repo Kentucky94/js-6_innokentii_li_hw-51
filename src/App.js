@@ -1,26 +1,24 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Navigation from "./Navbar";
+import MovieCard from './Card';
+import Footer from './Footer'
+import './Card.css'
+import requiem from "./assets/requiem.jpg";
+import interstellar from "./assets/interstellar.jpg";
+import joker from "./assets/joker.jpg";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = (props) => {
+  return(
+      <div>
+          <Navigation/>
+          <div id="cardBox">
+              <MovieCard imgUrl={requiem} title="Requiem For A Dream" year="2000"/>
+              <MovieCard imgUrl={interstellar} title="Interstellar" year="2014"/>
+              <MovieCard imgUrl={joker} title="Joker" year="2019"/>
+          </div>
+          <Footer/>
+      </div>
+  )
+};
 
 export default App;

@@ -1,0 +1,12 @@
+.card{
+    width: 400px;
+}
+#cardBox{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.card_element{
+    display: inline-block;
+}
